@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# Chronos Pomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Pomodoro timer built with React + TypeScript + Vite, featuring TailwindCSS for styling.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## React Compiler
+- Node.js (v18 or higher recommended)
+- npm or pnpm
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Installation
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 🔧 Code Quality & Development Tools
+
+This project is configured with industry-standard tools for maintaining high code quality:
+
+### ESLint
+
+Strict ESLint configuration with TypeScript type-checking enabled:
+- Type-aware linting rules for TypeScript
+- React Hooks best practices
+- React Refresh for HMR
+- Prettier integration for consistent formatting
+- Automatic unused variable detection
+- Enforced module imports best practices
+
+**Commands:**
+```bash
+npm run lint          # Check for linting errors
+npm run lint:fix      # Auto-fix linting errors
+```
+
+### Prettier
+
+Code formatting with Prettier configured for:
+- Single quotes for strings
+- Semicolons enabled
+- Trailing commas
+- 100 character line width
+- 2 space indentation
+- Unix line endings (LF)
+
+**Commands:**
+```bash
+npm run format        # Format all source files
+npm run format:check  # Check if files are formatted
+```
+
+### TypeScript Configuration
+
+Strict TypeScript settings with ES Module support:
+- **Module System**: ESNext modules with bundler resolution
+- **Target**: ES2022 for modern JavaScript features
+- **Strict Mode**: Enabled with additional safety checks
+- **Path Resolution**: Support for JSON imports and isolatedModules
+- **Type Safety**: No implicit returns, unchecked indexed access protection
+
+## 📁 Project Structure
+
+```
+chronos-pomodoro/
+├── src/               # Source files
+│   ├── App.tsx        # Main application component
+│   ├── main.tsx       # Application entry point
+│   └── index.css      # Global styles
+├── .prettierrc        # Prettier configuration
+├── .prettierignore    # Prettier ignore patterns
+├── eslint.config.js   # ESLint configuration
+├── tsconfig.json      # Base TypeScript config
+├── tsconfig.app.json  # App TypeScript config
+├── tsconfig.node.json # Node/build tools TypeScript config
+└── vite.config.ts     # Vite configuration
+```
+
+## 🛠️ Technology Stack
+
+- **React 19** - Modern React with latest features
+- **TypeScript 5.9** - Type-safe JavaScript
+- **Vite 7** - Fast build tool and dev server
+- **TailwindCSS 4** - Utility-first CSS framework
+- **ESLint 9** - Linting with flat config
+- **Prettier 3** - Code formatting
