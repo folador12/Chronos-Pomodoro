@@ -19,10 +19,10 @@
 
     /* Linting */
     "strict": true,
-    "isolatedModules": true, 
-    "noUncheckedIndexedAccess": true, 
-    "noImplicitOverride": true, 
-    "noPropertyAccessFromIndexSignature": true, 
+    "isolatedModules": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
