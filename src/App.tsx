@@ -1,9 +1,5 @@
-function App() {
+export const App = () => {
   return (
-    <div className="flex items-center justify-center h-screen w-screen bg-black text-white">
-      <span className="text-2xl font-bold">Chronos Pomodoro</span>
-    </div>
+    <div className="flex items-center justify-center h-screen w-screen bg-gray-800 p-4 rounded-lg flex-col gap-4"></div>
   );
-}
-
-export default App;
+};
